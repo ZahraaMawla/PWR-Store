@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)file:///C:/Users/Zah%20raa/Desktop/pwrstore.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PWR Store</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f5f5f5; margin: 0; }
+    h1 { text-align: center; margin: 2rem; }
+
+    .programs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 1rem;
+    }
+
+    .program {
+      background: white;
+      border-radius: 8px;
+      width: 180px;
+      cursor: pointer;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .program:hover {
+      transform: scale(1.05);
+    }
+
+    .program img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    .program-name {
+      padding: 0.8rem;
+      font-weight: bold;
+    }
+
+    .prices {
+      display: none;
+      background: white;
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .prices h2 {
+      text-align: center;
+    }
+
+    .prices ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .prices li {
+      background: #eef;
+      padding: 0.5rem;
+      margin-bottom: 0.5rem;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #222;
+      color: white;
+    }
+
+    footer a {
+      color: #00ffcc;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<h1>
+Welcome to PWR Store
+</h1>
+
+<div class="programs">
+  <div class="program" onclick="showPrices(&#39;ushare&#39;)">
+    <img src="./PWR SERVICES_files/OIP.WDduv5iu55PG1JhROgS_sgHaFj" alt="Alfa Ushare">
+    <div class="program-name">Alfa Internet</div>
+  </div>
+
+  <div class="program" onclick="showPrices(&#39;netflix&#39;)">
+    <img src="./PWR SERVICES_files/R.894b8aa1f6a5abeb3dc12fe47eaf5ef1" alt="Netflix">
+    <div class="program-name">Netflix</div>
+  </div>
+
+  <div class="program" onclick="showPrices(&#39;shahid&#39;)">
+    <img src="./PWR SERVICES_files/R.de3dfe78f8ca9eba0051782dc9698de7" alt="Shahid">
+    <div class="program-name">Shahid VIP</div>
+  </div>
+
+  <div class="program" onclick="showPrices(&#39;osn&#39;)">
+    <img src="./PWR SERVICES_files/og-logo-osn.png" alt="OSN">
+    <div class="program-name">OSN+</div>
+  </div>
+
+  <div class="program" onclick="showPrices(&#39;disney&#39;)">
+    <img src="./PWR SERVICES_files/merchant_image-merchant_logo_large.png" alt="Disney+">
+    <div class="program-name">Disney+</div>
+  </div>
+
+  <div class="program" onclick="showPrices(&#39;prime&#39;)">
+    <img src="./PWR SERVICES_files/AmazonPrime3_Full_740x500_Images_large.jpg" alt="Prime Video">
+    <div class="program-name">Prime Video</div>
+  </div>
+
+  <div class="program" onclick="showPrices(&#39;anghami&#39;)">
+    <img src="./PWR SERVICES_files/Anghami.png" alt="Anghami">
+    <div class="program-name">Anghami+</div>
+  </div>
+
+  <div class="program" onclick="showPrices(&#39;touch&#39;)">
+    <img src="./PWR SERVICES_files/OIP.ucm-sikjSqUtuIrowdoV_AHaHa" alt="Touch">
+    <div class="program-name">Touch Recharge</div>
+  </div>
+
+  <div class="program" onclick="showPrices(&#39;alfa&#39;)">
+    <img src="./PWR SERVICES_files/alfa_a9316d0e78.png" alt="Alfa">
+    <div class="program-name">Alfa Recharge</div>
+  </div>
+
+  <div class="program" onclick="showPrices(&#39;pubg&#39;)">
+    <img src="./PWR SERVICES_files/R.50093326e9646d60b25e7022c429ca24" alt="PUBG">
+    <div class="program-name">Pubg Mobile UC</div>
+  </div>
+
+  <div class="program" onclick="showPrices(&#39;tiktok&#39;)">
+    <img src="./PWR SERVICES_files/OIP.GX0goKmpvM-ohWBXc0LfvQHaEc" alt="TikTok">
+    <div class="program-name">TikTok Coins</div>
+  </div>
+
+  <div class="program" onclick="showPrices(&#39;Chatgpt&#39;)">
+    <img src="./PWR SERVICES_files/R.ec927d11816f3cc6dc42c5293598d865" alt="Chatgpt">
+    <div class="program-name">Chatgpt+</div>
+  </div>
+
+  <div class="program" onclick="showPrices(&#39;Canva&#39;)">
+    <img src="https://styles.redditmedia.com/t5_bqrzfi/styles/communityIcon_5kpjqd1wrj6d1.png" alt="Canva">
+    <div class="program-name">Canva pro</div>
+  </div>
+
+  <div class="program" onclick="showPrices(&#39;Spotify&#39;)">
+    <img src="https://cdn.pixabay.com/photo/2016/10/22/00/15/spotify-1759471_1280.jpg" alt="Spotify">
+    <div class="program-name">Spotify</div>
+  </div>
+  
+<!-- Prices Section -->
+<div id="prices" class="prices" style="display: block;">
+  <h2 id="programTitle">Netflix</h2>
+  <ul id="priceList"><li>$2 – 1 month</li><li>$5 – 3 months</li><li>$16 – 1 year</li></ul>
+</div>
+
+
+<footer style="
+position: fixed;
+bottom: 0;
+left: 0;
+width: 100%;
+text-align: center;
+padding: 15px 0;
+font-family: Arial, sans-serif;
+z-index: 100;">
+  <h3 style+"margin-bottom:="" 10px;"="">Contact us on:</h3>
+  <div style+"line-height:="" 2;"="">
+  <a href="https://wa.me/96181675658" target="_blank">WhatsApp</a> |
+  <a href="https://www.instagram.com/pwrtima?igsh=dDdveXlmaWRodjRw&amp;utm_source=qr" target="_blank">Instagram</a> |
+  <a href="https://www.tiktok.com/@itsxtima?_t=ZS-8xTu1TbNckU&amp;_r=1" target="_blank">TikTok</a>
+</div>
+</footer>
+
+<script>
+  const priceData = {
+    ushare: ["$6.49 – 5GB", "$8.59 – 10GB", "$11.99 – 20GB", "$13.79 – 30GB"],
+    netflix: ["Only User:", "$2 – 1 month ", "$5 – 3 months", "$7.99 – 6 months", "$14.99 – 1 year", "Full Account:", "$6.99 – 1 month ", "$16.5 – 3 months", "$57.99 – 1 year"],
+    shahid: ["$1.5 – 1 month", "$3.5 – 3 months", "$8.5 – 1 year"],
+    osn: ["$3.5 – 1 month", "$9.5 – 3 months", "$23 – 1 year"],
+    disney: ["$3.5 – 1 month", "$9.5 – 3 months", "$18.89 – 6 months", "$32 – 1 year"],
+    prime: ["$2.5 – 1 month", "$6 – 3 months", "$9.59 – 5+1 months", "$16.99 – 1 year"],
+    anghami: ["$4.99 – 3 months", "$8.99 – 5+1 months", "$12.99 – 1 year"],
+    touch: ["$1.19 – 1$", "$3 – 1 month", "$3.33 – 1 month + $1.3", "$5.55 – $4.5 card", "$8.89 – $7.79 card"],
+    alfa: ["$1.19 – 1$", "$3 – 1 month", "$3.33 – 1 month + $1.3", "$5.55 – $4.5 card", "$8.89 – $7.79 card"],
+    pubg: ["$5 – 325 UC (ID)", "$24 – 1800 UC (ID)", "$41.5 – 3850 UC (login)", "$43 – 3850 UC (ID)", "$75 – 8100 UC (login)", "$84 – 8100 UC (ID)"],
+    tiktok: ["$6 – 500", "$8 – 700", "$11 – 1000", "$13 – 1200", "$16 – 1500", "$19.29 – 1800", "$21.5 – 2000", "$27 – 2500", "$32 – 3000", "$36.5 – 3500", "$42.2 – 4000", "$53 – 5000", "$63.2 – 6000", "$73 – 7000", "$104 – 10000", "$182 – 17500"],
+   Chatgpt: ["$8 – 3 months (shared)", "$13.99 – 6 months (shared)", "$18.99 – 1 year (shared)", "$8.99 – 1 month (private)", "$21.21 – 3 months (private)", "$77.99 – 1 year (private)"],
+   Canva: ["$4.99 – 1 year"],
+   Spotify: ["$12.12 – 1 year"]
+  };
+
+  const titles = {
+    ushare: "Alfa Ushare",
+    netflix: "Netflix",
+    shahid: "Shahid",
+    osn: "OSN",
+    disney: "Disney+",
+    prime: "Prime Video",
+    anghami: "Anghami",
+    touch: "Touch",
+    alfa: "Alfa",
+    pubg: "PUBG UC",
+    tiktok: "TikTok Coins",
+    Chatgpt: "Chatgpt",
+    Canva: "Canva",
+    Spotify: "Spotify"
+  };
+
+  function showPrices(key) {
+    const list = document.getElementById("priceList");
+    const title = document.getElementById("programTitle");
+    list.innerHTML = "";
+    title.textContent = titles[key];
+    priceData[key].forEach(price => {
+      const li = document.createElement("li");
+      li.textContent = price;
+      list.appendChild(li);
+    });
+    document.getElementById("prices").style.display = "block";
+    window.scrollTo({ top: document.getElementById("prices").offsetTop - 90, behavior: 'smooth' });
+  }
+</script>
+
+
+</div></body></html>
